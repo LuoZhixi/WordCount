@@ -4,7 +4,7 @@ int main(int argc, char* argv[]) {
 	int word = 0;
 	char ch;
 	FILE* file;
-	errno_t err = fopen_s(&file,"E:\\study\\DevC++\\test.txt", "r");
+	errno_t err = fopen_s(&file,argv[2], "r");
 	if (err == 0) {
 		if (!strcmp(argv[1], "-c") || !strcmp(argv[1], "-C")) {
 			while ((ch = fgetc(file)) != EOF) {
